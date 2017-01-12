@@ -1,24 +1,23 @@
 {
-  "name": "connect-flash",
-  "version": "0.1.1",
-  "description": "Flash message middleware for Connect.",
+  "name": "express-flash-2",
+  "version": "1.0.0",
+  "description": "Flash message middleware for express.",
   "keywords": [
-    "connect",
     "express",
     "flash",
     "messages"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/connect-flash.git"
+    "url": "git://github.com/jack2gs/express-flash-2.git"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/connect-flash/issues"
+    "url": "http://github.com/jack2gs/express-flash-2/issues"
   },
   "author": {
-    "name": "Jared Hanson",
-    "email": "jaredhanson@gmail.com",
-    "url": "http://www.jaredhanson.net/"
+    "name": "Jack Gao",
+    "email": "sailor.gao@yahoo.com",
+    "url": "http://www.isupergeek.com/"
   },
   "licenses": [
     {

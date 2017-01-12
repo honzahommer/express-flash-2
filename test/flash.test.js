@@ -93,5 +93,5 @@ describe('flash', function(){
         });
       });
     });
-  })
+  });
 });
