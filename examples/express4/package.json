@@ -2,7 +2,13 @@
   "name": "express-flash-2-examples-express4",
   "version": "0.0.0",
   "dependencies": {
-    "express": "4.x.x",
-    "ejs": "0.6.x"
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.5.5",
+    "express": "~4.14.0",
+    "express-session": "^1.14.2",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
   }
 }
