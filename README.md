@@ -22,11 +22,13 @@ provided by express-flash-2.
 var flash = require('express-flash-2');
 var app = express();
 
-app.configure(function() {
-  app.use(express.cookieParser('keyboard cat'));
-  app.use(express.session({ cookie: { maxAge: 60000 }}));
+  app.use(cookieParser('keyboard cat'));
+  app.use(session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized:true}));
+ // use  the flash middleware 
   app.use(flash());
-});
 ```
 
 With the `flash` middleware in place, all requests will have a `res.flash()` function
@@ -42,7 +44,7 @@ app.get('/flash', function(req, res){
 
 ## Examples
 
-For an example using connect-flash in an Express 4.x app, refer to the [express4](https://github.com/jaredhanson/connect-flash/tree/master/examples/express3)
+For an example using express-flash-2 in an Express 4.x app, refer to the [express4](https://github.com/jack2gs/express-flash-2/tree/master/examples/express4)
 example.
 
 ## Tests

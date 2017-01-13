@@ -19,10 +19,7 @@ var app = express();
     secret: 'keyboard cat',
     resave: true,
     saveUninitialized:true}));
-  
-  // Use connect-flash middleware.  This will add a `req.flash()` function to
-  // all requests, matching the functionality offered in Express 2.x.
-  
+ // use  the flash middleware 
   app.use(flash());
 
 app.get('/', function(req, res){
