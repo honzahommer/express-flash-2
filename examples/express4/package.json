@@ -1,0 +1,8 @@
+{
+  "name": "express-flash-2-examples-express4",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "4.x.x",
+    "ejs": "0.6.x"
+  }
+}

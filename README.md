@@ -1,29 +1,25 @@
-# connect-flash
+# express-flash-2
 
-The flash is a special area of the session used for storing messages.  Messages
-are written to the flash and cleared after being displayed to the user.  The
-flash is typically used in combination with redirects, ensuring that the message
-is available to the next page that is to be rendered.
+This middleware is based on `connect-flash`. I simplify it and rewite the tests with `Mocha` and `Chai`.
 
-This middleware was extracted from [Express](http://expressjs.com/) 2.x, after
-Express 3.x removed direct support for the flash.  connect-flash brings this
-functionality back to Express 3.x, as well as any other middleware-compatible
-framework or application. +1 for [radical reusability](http://substack.net/posts/b96642/the-node-js-aesthetic).
+* use `res.flash()` instead of `req.flash()`;
+* res.flash() just for writing messages into the sesson;
+* all flash messages will be copied to `res.req.session.flash` automatically.
 
 ## Install
 
-    $ npm install connect-flash
+    $ npm install express-flash-2
 
 ## Usage
 
-#### Express 3.x
+#### Express 4.x
 
 Flash messages are stored in the session.  First, setup sessions as usual by
 enabling `cookieParser` and `session` middleware.  Then, use `flash` middleware
-provided by connect-flash.
+provided by express-flash-2.
 
 ```javascript
-var flash = require('connect-flash');
+var flash = require('express-flash-2');
 var app = express();
 
 app.configure(function() {
@@ -33,25 +29,20 @@ app.configure(function() {
 });
 ```
 
-With the `flash` middleware in place, all requests will have a `req.flash()` function
+With the `flash` middleware in place, all requests will have a `res.flash()` function
 that can be used for flash messages.
 
 ```javascript
 app.get('/flash', function(req, res){
-  // Set a flash message by passing the key, followed by the value, to req.flash().
-  req.flash('info', 'Flash is back!')
+  // Set a flash message by passing the key, followed by the value, to res.flash().
+  res.flash('info', 'Flash is back!')
   res.redirect('/');
-});
-
-app.get('/', function(req, res){
-  // Get an array of flash messages by passing the key to req.flash()
-  res.render('index', { messages: req.flash('info') });
 });
 ```
 
 ## Examples
 
-For an example using connect-flash in an Express 3.x app, refer to the [express3](https://github.com/jaredhanson/connect-flash/tree/master/examples/express3)
+For an example using connect-flash in an Express 4.x app, refer to the [express4](https://github.com/jaredhanson/connect-flash/tree/master/examples/express3)
 example.
 
 ## Tests
