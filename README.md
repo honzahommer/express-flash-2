@@ -4,7 +4,7 @@ This middleware is based on `connect-flash`. I simplify it and rewite the tests 
 
 * use `res.flash()` instead of `req.flash()`;
 * res.flash() just for writing messages into the sesson;
-* all flash messages will be copied to `res.req.session.flash` automatically.
+* all flash messages will be copied to `res.locals.flash` automatically.
 
 ## Install
 
