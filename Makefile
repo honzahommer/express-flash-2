@@ -4,11 +4,11 @@ SOURCES = lib/*.js
 # Node Tests
 # ==============================================================================
 
-VOWS = ./node_modules/.bin/vows
-TESTS ?= test/*-test.js
+MOCHA = ./node_modules/.bin/mocha
+TESTS ?= test/*.test.js
 
 test:
-	@NODE_ENV=test NODE_PATH=lib $(VOWS) $(TESTS)
+	@NODE_ENV=test $(MOCHA) $(TESTS)
 
 # ==============================================================================
 # Static Analysis

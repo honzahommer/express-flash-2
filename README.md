@@ -1,6 +1,5 @@
 # express-flash-2 [![Build Status](https://travis-ci.org/jack2gs/express-flash-2.svg?branch=master)](https://travis-ci.org/jack2gs/express-flash-2)
 
-
 This middleware is based on `connect-flash`. I simplify it and rewite the tests with `Mocha` and `Chai`.
 
 * use `res.flash()` instead of `req.flash()`;
@@ -52,8 +51,6 @@ example.
 
     $ npm install  
     $ make test
-
-
 
 ## Credits
 
