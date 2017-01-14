@@ -1,6 +1,6 @@
 {
   "name": "express-flash-2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flash message middleware for express.",
   "keywords": [
     "express",
