@@ -81,13 +81,13 @@ describe('flash', function(){
         assert.lengthOf(req.session.flash['info'], 1);
       });
 
-       it('should get and clear previously set flash message', function(){
+      it('should get and clear previously set flash message', function(done){
         res.flash('error', 'Something went wrong');
-         process.nextTick(function(){
+        process.nextTick(function(){
           flash(req, res, function(err){
-            assert.lengthOf(res.locals.flash, 1);
-            assert.equal(res.locals.flash[0], 'Something went wrong');
-            assert.lengthOf(Object.keys(res.session.flash), 0);
+            assert.lengthOf(Object.keys(res.locals.flash), 1);
+            assert.equal(res.locals.flash['error'], 'Something went wrong');
+            assert.lengthOf(Object.keys(req.session.flash), 0);
             done();
           });
         });
